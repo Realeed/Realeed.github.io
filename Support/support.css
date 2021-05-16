@@ -131,6 +131,21 @@ body {
     color: rgb(240, 240, 240);
     user-select: none;
 }
+#contacttab {
+    margin: 50px;
+    margin-left: 80px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+.contact {
+    font-size: 28px;
+}
+.contacthref {
+    padding-left: 20px;
+    text-decoration: none;
+    color: rgb(40, 75, 204);
+    font-size: 25px;
+}
 #bottompanel {
     background-color: rgb(240, 240, 240);
     height: 565px;
