@@ -32,16 +32,16 @@ addEventListener("DOMContentLoaded", () => {
         }
     }
     searchBut.onmouseenter = () => {
-        searchImg.src = '../data/searchwh.png';
+        searchImg.src = 'data/searchwh.png';
     }
     searchBut.onmouseleave = () => {
-        searchImg.src = '../data/search.png';
+        searchImg.src = 'data/search.png';
     }
     bagBut.onmouseenter = () => {
-        bagImg.src = '../data/bagwh.png';
+        bagImg.src = 'data/bagwh.png';
     }
     bagBut.onmouseleave = () => {
-        bagImg.src = '../data/bag.png';
+        bagImg.src = 'data/bag.png';
     }
     for (let i = 0; i < 2; i++) {
         closeCountry[i].onclick = () => {
@@ -124,7 +124,7 @@ addEventListener("DOMContentLoaded", () => {
             document.getElementById('covid').style.display = 'none';
             document.getElementById('shop_del').style.display = 'none';
             const searchim = document.createElement('img');
-            searchim.src = '../data/search.png';
+            searchim.src = 'data/search.png';
             searchim.style.width = '25px';
             searchim.style.marginBottom = '-6px';
             document.getElementById('menu').appendChild(searchim);
