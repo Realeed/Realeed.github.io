@@ -4,6 +4,12 @@ addEventListener("DOMContentLoaded", () => {
         document.body.style.visibility = 'visible';
     }
     setTimeout(makeVis, 500);
+    if (localStorage.getItem('country_is_closed')) {
+        document.getElementById('scountry').style.display = 'none';
+        document.getElementById('scountryMob').style.display = 'none';
+        document.getElementById('menu').style.marginTop = '0px';
+        document.getElementById('covid').style.paddingTop = '42px';
+    }
     const closeCountry = document.getElementsByClassName('closeCountry');
     const searchBut = document.getElementById('menusearch');
     const searchImg = document.getElementById('searchImg');
@@ -45,6 +51,9 @@ addEventListener("DOMContentLoaded", () => {
     }
     for (let i = 0; i < 2; i++) {
         closeCountry[i].onclick = () => {
+            if (!localStorage.getItem('country_is_closed')) {
+                localStorage.setItem('country_is_closed', true)
+            }
             document.getElementById('scountry').style.display = 'none';
             document.getElementById('scountryMob').style.display = 'none';
             document.getElementById('menu').style.marginTop = '0px';
