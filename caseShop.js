@@ -106,6 +106,7 @@ addEventListener("DOMContentLoaded", () => {
                 window.scroll(0, 0);
             }
             document.getElementById('iphone12Info').style.visibility = 'hidden';
+            document.getElementById('samsung').style.visibility = 'hidden';
             document.getElementById('grey').style.backgroundColor = 'white';
             const searchtab = document.getElementById('searchtab');
             searchtab.style.display = 'block';
