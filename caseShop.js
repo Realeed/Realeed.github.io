@@ -49,6 +49,16 @@ addEventListener("DOMContentLoaded", () => {
     bagBut.onmouseleave = () => {
         bagImg.src = 'data/bag.png';
     }
+    document.getElementById('langHay').onclick = () => {
+        document.getElementById('iphone12txt').innerHTML = 'Հայերենը շուտով։)';
+        document.getElementById('langEng').disabled = false;
+        document.getElementById('langEng').style.color = 'white';
+        document.getElementById('langEng').style.cursor = 'pointer';
+
+    }
+    document.getElementById('langEng').onclick = () => {
+        document.getElementById('iphone12txt').innerHTML = 'iPhone Cases';
+    }
     for (let i = 0; i < 2; i++) {
         closeCountry[i].onclick = () => {
             if (!localStorage.getItem('country_is_closed')) {
