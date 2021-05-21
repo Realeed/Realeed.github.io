@@ -261,6 +261,7 @@ addEventListener("DOMContentLoaded", () => {
                 document.getElementById('covid').style.display = 'block';
                 document.getElementById('shop_del').style.display = 'block';
                 document.getElementById('iphone12Info').style.visibility = 'visible';
+                document.getElementById('samsung').style.visibility = 'visible';
                 document.getElementById('stxt').style.display = 'none';
                 searchtab.style.display = 'none';
                 for (let i = 0; i < 3; i++) {
