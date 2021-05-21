@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Administrator</title>
+        <meta name="viewpoint" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="admin.css">
+        <script src="admin.js"></script>
+        <link rel="icon" href="../data/logo.png">
+    </head>
+    <body>
+        <div id="menu">
+            <table id="secondTable">
+                <tr>
+                    <td><a class="menu" href="../index.html"><button id="logoBut"><img id="logo" src="../data/logo.jpg" alt="Case Shop"></button></a></td>
+                    <td><a class="menu" id="menuiphone" href="iphone.html" style="margin-left: 20px;">iPhone</a></td>
+                    <td><a class="menu" id="menusamsung" href="../Samsung/samsung.html">Samsung</a></td>
+                    <td><a class="menu" id="menuairpod" href="../Airpod/airpod.html" style="margin-right: 10px;">AirPod</a></td>
+                    <td><a class="menu" id="menucustom" href="custom.html">Customize</a></td>
+                    <td><a class="menu" id="menusupport" href="../Support/support.html">Support</a></td>
+                    <td><button class="menu" id="menusearch"><img id="searchImg" src="../data/search.png" alt="Search"></button></td>
+                    <td><button class="menu" id="menubag"><img id="bagImg" src="../data/bag.png" alt="Bag"></button></td>
+                </tr>
+            </table>
+            <table id="searchtab">
+                <tr class="butsc">
+                    <td><img src="../data/searchbl.png" style="width: 20px; margin-top: 10px; margin-left: 10px;" alt=""></td>
+                    <td><button class="sbuts" style="padding-top: 8px;">iphone</button></td>
+                </tr>
+                <tr class="butsc">
+                    <td><img src="../data/searchbl.png" style="width: 20px; margin-left: 10px;" alt=""></td>
+                    <td><button class="sbuts" style="padding-bottom: 3px;">samsung</button></td>
+                </tr>
+                <tr class="butsc">
+                    <td><img src="../data/searchbl.png" style="width: 20px; margin-left: 10px;" alt=""></td>
+                    <td><button class="sbuts" style="padding-bottom: 3px;">airpod</button></td>
+                </tr>
+                <tr>
+                    <td><p id="stxt">Searching in casessouel.com</p></td>
+                </tr>
+            </table>
+        </div>
+        <div id="newProduct">
+            <h1 id="addprdhead">Add a new product</h1>
+            <table id="newProducttab">
+                <tr>
+                    <td><input type="file" name="caseImg" id="imageInp"></td>
+                </tr>
+                <tr>
+                    <td><label id="desclab" for="description">Description: <br> </label><textarea name="description" id="productDesc" cols="30" rows="5"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label id="prclab" for="price">Price: <br> </label><input type="text" name="price" id="productPrc"></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
