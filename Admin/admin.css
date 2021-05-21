@@ -201,12 +201,26 @@ body {
 }
 #descPrevtab {
     margin: auto;
-    margin-left: 900px;
-    margin-top: 50px;
+    margin-left: 850px;
+    margin-top: 35px;
+    font-family: sans-serif;
+    color: rgb(50, 50, 50);
+    user-select: none;
+    -webkit-user-drag: none;
 }
 #imagePrev {
     margin-top: 50px;
-    margin-left: 250px;
-    width: 400px;
+    margin-left: 220px;
+    height: 400px;
     display: none;
+}
+#headerPrev {
+    font-weight: 540;
+}
+#prcPrev {
+    font-size: 20px;
+    margin-top: -10px;
+}
+#descPrev {
+    font-size: 18px;
 }

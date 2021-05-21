@@ -285,7 +285,9 @@ addEventListener("DOMContentLoaded", () => {
     }
     document.getElementById('imageInp').onchange = function loadFile(event) {
         document.getElementById('imagePrev').src = URL.createObjectURL(event.target.files[0]);
-        document.getElementById('imagePrev').style.display = 'block';
+        document.getElementById('imagePrev').style.display = 'inline';
+        document.getElementById('descPrevtab').style.marginTop = '-419px';
+
         return false;
     }
     document.getElementById('productHeader').onkeyup = () => {
