@@ -292,4 +292,7 @@ addEventListener("DOMContentLoaded", () => {
         dragElement(file);
         return false;
     }
+    document.getElementById('productDesc').onkeypress = () => {
+        document.getElementById('descPrev').innerHTML = document.getElementById('productDesc').value;
+    }
 })
