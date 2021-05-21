@@ -295,10 +295,6 @@ addEventListener("DOMContentLoaded", () => {
     }
     document.getElementById('productDesc').onkeyup = () => {
         document.getElementById('descPrev').innerHTML = document.getElementById('productDesc').value;
-        if (document.getElementById('productDesc').value.length > 10) {
-            let br = document.createElement('br');
-            document.getElementById('descPrev').appendChild(br)
-        }
     }
     document.getElementById('productPrc').onkeyup = () => {
         document.getElementById('prcPrev').innerHTML = document.getElementById('productPrc').value;

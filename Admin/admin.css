@@ -211,15 +211,16 @@ body {
 #imagePrev {
     margin-top: 50px;
     margin-left: 220px;
-    height: 400px;
+    height: 550px;
     display: none;
 }
 #headerPrev {
     font-weight: 540;
 }
 #prcPrev {
-    font-size: 20px;
+    font-size: 25px;
     margin-top: -10px;
+    color: rgb(120, 120, 120);
 }
 #descPrev {
     font-size: 18px;
