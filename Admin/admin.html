@@ -46,6 +46,9 @@
                     <td><label id="imageInplab"  for="caseImg">Upload the product image: </label><input type="file" accept="image/*" name="caseImg" id="imageInp"></td>
                 </tr>
                 <tr>
+                    <td><textarea name="header" id="productHeader" placeholder="Header"></textarea></td>
+                </tr>
+                <tr>
                     <td><textarea name="description" id="productDesc" placeholder="Description"></textarea></td>
                 </tr>
                 <tr>
@@ -57,17 +60,16 @@
                     <td><button id="addProdbut">Add</button></td>
                 </tr>
             </table>
-            <table id="productPrevtab">
+            <img id="imagePrev" src="" alt="image">
+            <table id="descPrevtab">
                 <tr>
-                    <td rowspan="3" id="imagePrev"></td>
-                    <td>
-                        <tr>
-                            <td id="descPrev"></td>
-                        </tr>
-                        <tr>
-                            <td id="prcPrev"></td>
-                        </tr>
-                    </td>
+                    <td><h1 id="headerPrev">Header</h1></td>
+                </tr>
+                <tr>
+                    <td><p id="descPrev">Desc</p></td>
+                </tr>
+                <tr>
+                    <td><p id="prcPrev">Price</p></td>
                 </tr>
             </table>
         </div>

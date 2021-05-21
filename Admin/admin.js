@@ -284,15 +284,21 @@ addEventListener("DOMContentLoaded", () => {
         setTimeout(search, 300);
     }
     document.getElementById('imageInp').onchange = function loadFile(event) {
-        let file = document.createElement('img');
-        file.src = URL.createObjectURL(event.target.files[0]);
-        file.style.webkitUserDrag = 'none';
-        file.style.width = '500px';
-        document.getElementById('imagePrev').appendChild(file);
-        dragElement(file);
+        document.getElementById('imagePrev').src = URL.createObjectURL(event.target.files[0]);
+        document.getElementById('imagePrev').style.display = 'block';
         return false;
     }
-    document.getElementById('productDesc').onkeypress = () => {
+    document.getElementById('productHeader').onkeyup = () => {
+        document.getElementById('headerPrev').innerHTML = document.getElementById('productHeader').value;
+    }
+    document.getElementById('productDesc').onkeyup = () => {
         document.getElementById('descPrev').innerHTML = document.getElementById('productDesc').value;
+        if (document.getElementById('productDesc').value.length > 10) {
+            let br = document.createElement('br');
+            document.getElementById('descPrev').appendChild(br)
+        }
+    }
+    document.getElementById('productPrc').onkeyup = () => {
+        document.getElementById('prcPrev').innerHTML = document.getElementById('productPrc').value;
     }
 })

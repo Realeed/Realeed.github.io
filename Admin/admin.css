@@ -143,10 +143,21 @@ body {
     font-size: 20px;
     margin-left: 10px;
 }
+#productHeader {
+    width: 500px;
+    height: 50px;
+    margin-top: 30px;
+    padding: 5px;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    resize: none;
+}
 #productDesc {
     width: 500px;
     height: 120px;
-    margin-top: 30px;
+    margin-top: 10px;
     padding: 5px;
     font-family: sans-serif;
     font-size: 18px;
@@ -170,7 +181,6 @@ body {
     cursor: pointer;
     width: 100px;
     height: 38px;
-
 }
 #prevProdbut:hover {
     background-color: rgb(55, 105, 255);
@@ -189,10 +199,14 @@ body {
 #addProdbut:hover {
     background-color: rgb(55, 105, 255);
 }
-#productPrevtab {
-    width: 70%;
+#descPrevtab {
     margin: auto;
-    padding-top: 100px;
-    user-select: none;
-    -webkit-user-drag: none;
+    margin-left: 900px;
+    margin-top: 50px;
+}
+#imagePrev {
+    margin-top: 50px;
+    margin-left: 250px;
+    width: 400px;
+    display: none;
 }
