@@ -153,6 +153,14 @@ select option:checked {
     border-radius: 10px;
     display: none;
 }
+#langEng {
+    margin-left: 40px;
+    cursor: default;
+    color: rgb(150, 150, 150);
+}
+#langHay {
+    margin-left: -40px;
+}
 .sbuts {
     background-color: rgb(190, 190, 190);
     border: none;
@@ -254,7 +262,7 @@ select option:checked {
     }
 }
 #secondTable {
-    width: 60%;
+    width: 70%;
     margin: auto;
 }
 @media (min-width: 450px) and (max-width: 1000px) {
