@@ -43,13 +43,18 @@
             <h1 id="addprdhead">Add a new product</h1>
             <table id="newProducttab">
                 <tr>
-                    <td><input type="file" name="caseImg" id="imageInp"></td>
+                    <td><label id="imageInplab"  for="caseImg">Upload the product image: </label><input type="file" accept="image/*" name="caseImg" id="imageInp"></td>
                 </tr>
                 <tr>
-                    <td><label id="desclab" for="description">Description: <br> </label><textarea name="description" id="productDesc" cols="30" rows="5"></textarea></td>
+                    <td><textarea name="description" id="productDesc" placeholder="Description"></textarea></td>
                 </tr>
                 <tr>
-                    <td><label id="prclab" for="price">Price: <br> </label><input type="text" name="price" id="productPrc"></td>
+                    <td><input type="text" name="price" id="productPrc" placeholder="Price"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button id="prevProdbut">Preview</button></td>
+                    <td><button id="addProdbut">Add</button></td>
                 </tr>
             </table>
         </div>

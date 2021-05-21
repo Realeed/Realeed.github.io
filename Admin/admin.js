@@ -286,4 +286,13 @@ addEventListener("DOMContentLoaded", () => {
         }
         setTimeout(search, 300);
     }
+    document.getElementById('imageInp').onchange = function loadFile(event) {
+        let file = document.createElement('img');
+        file.src = URL.createObjectURL(event.target.files[0]);
+        file.style.webkitUserDrag = 'none';
+        file.style.width = '500px';
+        document.getElementById('newProducttab').appendChild(file);
+        dragElement(file);
+        return false;
+    }
 })

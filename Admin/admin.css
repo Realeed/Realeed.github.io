@@ -132,19 +132,57 @@ body {
     margin: auto;
     padding-top: 100px;
 }
-#imageInp {
-    font-size: 30px;
+#imageInplab {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    color: rgb(50, 50, 50);
 }
-#desclab {
-   
+#imageInp {
+    font-size: 20px;
+    margin-left: 10px;
 }
 #productDesc {
     width: 500px;
     height: 120px;
-    font-size: 30px;
+    margin-top: 30px;
+    padding: 5px;
+    font-family: sans-serif;
+    font-size: 18px;
     outline: none;
     resize: none;
 }
 #productPrc {
     outline: none;
+    height: 25px;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin-top: 15px;
+    padding-left: 5px;
+}
+#prevProdbut {
+    background-color: rgb(40, 90, 255);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+
+}
+#prevProdbut:hover {
+    background-color: rgb(55, 105, 255);
+}
+#addProdbut {
+    background-color: rgb(40, 90, 255);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 80px;
+    height: 40px;
+}
+#addProdbut:hover {
+    background-color: rgb(55, 105, 255);
 }
