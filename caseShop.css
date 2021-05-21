@@ -144,6 +144,24 @@ select option:checked {
     cursor: pointer;
     -webkit-user-drag: none;
 }
+#slang {
+    background-color: rgb(40, 40, 40);
+    outline: none;
+    border: none;
+    color: rgb(170, 170, 170);
+    font-size: 15px;
+    margin-left: 30px;
+    cursor: pointer;
+    width: 100px;
+}
+.langopt {
+    background-color: rgb(110, 110, 110);
+    color: rgb(220, 220, 220);
+}
+#langEng {
+    cursor: default;
+    color: rgb(150, 150, 150);
+}
 #searchtab {
     width: 34%;
     margin-left: 34%;
@@ -152,14 +170,6 @@ select option:checked {
     position: fixed;
     border-radius: 10px;
     display: none;
-}
-#langEng {
-    margin-left: 40px;
-    cursor: default;
-    color: rgb(150, 150, 150);
-}
-#langHay {
-    margin-left: -40px;
 }
 .sbuts {
     background-color: rgb(190, 190, 190);
@@ -262,7 +272,7 @@ select option:checked {
     }
 }
 #secondTable {
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 @media (min-width: 450px) and (max-width: 1000px) {
