@@ -4,9 +4,6 @@ addEventListener("DOMContentLoaded", () => {
         document.body.style.visibility = 'visible';
     }
     setTimeout(makeVis, 500);
-    document.getElementById('menuiphone').onclick = () => {
-        return false;
-    }
     const searchBut = document.getElementById('menusearch');
     const searchImg = document.getElementById('searchImg');
     const bagBut = document.getElementById('menubag');
@@ -291,7 +288,7 @@ addEventListener("DOMContentLoaded", () => {
         file.src = URL.createObjectURL(event.target.files[0]);
         file.style.webkitUserDrag = 'none';
         file.style.width = '500px';
-        document.getElementById('newProducttab').appendChild(file);
+        document.getElementById('imagePrev').appendChild(file);
         dragElement(file);
         return false;
     }

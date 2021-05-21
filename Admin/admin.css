@@ -122,7 +122,7 @@ body {
     font-weight: 300;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: rgb(70, 70, 70);
- 
+    user-select: none;
 }
 #newProduct {
     width: 100%;
@@ -131,6 +131,8 @@ body {
     width: 70%;
     margin: auto;
     padding-top: 100px;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 #imageInplab {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -153,7 +155,7 @@ body {
 }
 #productPrc {
     outline: none;
-    height: 25px;
+    height: 23px;
     font-family: sans-serif;
     font-size: 16px;
     margin-top: 15px;
@@ -167,7 +169,7 @@ body {
     font-size: 18px;
     cursor: pointer;
     width: 100px;
-    height: 40px;
+    height: 38px;
 
 }
 #prevProdbut:hover {
@@ -181,8 +183,16 @@ body {
     font-size: 18px;
     cursor: pointer;
     width: 80px;
-    height: 40px;
+    height: 38px;
+    margin-left: 5px;
 }
 #addProdbut:hover {
     background-color: rgb(55, 105, 255);
+}
+#productPrevtab {
+    width: 70%;
+    margin: auto;
+    padding-top: 100px;
+    user-select: none;
+    -webkit-user-drag: none;
 }
