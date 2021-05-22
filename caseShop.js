@@ -47,6 +47,7 @@ addEventListener("DOMContentLoaded", () => {
     }
     bagBut.onmouseenter = () => {
         bagImg.src = 'data/bagwh.png';
+        document.getElementById('langtab').style.display = 'none';
     }
     bagBut.onmouseleave = () => {
         bagImg.src = 'data/bag.png';
