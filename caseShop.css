@@ -199,7 +199,7 @@ select option:checked {
     display: none;
 }
 #langtab {
-    width: 10%;
+    width: 15%;
     margin-left: 70%;
     background-color: rgb(190, 190, 190);
     position: fixed;
