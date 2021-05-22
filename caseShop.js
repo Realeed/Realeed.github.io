@@ -15,6 +15,8 @@ addEventListener("DOMContentLoaded", () => {
     const searchImg = document.getElementById('searchImg');
     const bagBut = document.getElementById('menubag');
     const bagImg = document.getElementById('bagImg');
+    const langBut = document.getElementById('menulang');
+    const langImg = document.getElementById('langImg');
     const menu = document.getElementsByClassName('menu');
     const country = document.getElementsByClassName('selectCountry')[0];
     const countryMob = document.getElementsByClassName('selectCountry')[1];
@@ -48,6 +50,12 @@ addEventListener("DOMContentLoaded", () => {
     }
     bagBut.onmouseleave = () => {
         bagImg.src = 'data/bag.png';
+    }
+    langBut.onmouseenter = () => {
+        langImg.src = 'data/langwh.png';
+    }
+    langBut.onmouseleave = () => {
+        langImg.src = 'data/lang.png';
     }
     document.getElementById('langHay').onclick = () => {
         document.body.style.visibility = 'hidden';
@@ -85,6 +93,7 @@ addEventListener("DOMContentLoaded", () => {
         menu[7].animate([{ opacity: '1' }, { opacity: '0' }], 50);
         menu[8].animate([{ opacity: '1' }, { opacity: '0' }], 30);
         menu[9].animate([{ opacity: '1' }, { opacity: '0' }], 10);
+        menu[10].animate([{ opacity: '1' }, { opacity: '0' }], 10);
         function opac0() {
             menu[0].style.visibility = 'hidden';
         }
@@ -131,8 +140,12 @@ addEventListener("DOMContentLoaded", () => {
             menu[9].style.visibility = 'hidden';
         }
         setTimeout(opac9, 0);
+        function opac10() {
+            menu[10].style.visibility = 'hidden';
+        }
+        setTimeout(opac10, 0);
         function search() {
-            for (let i = 0; i < 10; i++) {
+            for (let i = 0; i < 11; i++) {
                 menu[i].style.display = 'none';
             }
             if (window.pageYOffset > 0) {
@@ -190,7 +203,7 @@ addEventListener("DOMContentLoaded", () => {
                         searchim.style.display = 'none';
                         closeSearch.style.display = 'none';
                         searchbar.style.display = 'none';
-                        for (let i = 0; i < 10; i++) {
+                        for (let i = 0; i < 11; i++) {
                             menu[i].style.display = 'inline';
                         }
                     }
@@ -205,6 +218,7 @@ addEventListener("DOMContentLoaded", () => {
                     menu[7].animate([{ opacity: '0' }, { opacity: '1' }], 470);
                     menu[8].animate([{ opacity: '0' }, { opacity: '1' }], 480);
                     menu[9].animate([{ opacity: '0' }, { opacity: '1' }], 490);
+                    menu[10].animate([{ opacity: '0' }, { opacity: '1' }], 490);
                     function opac0() {
                         menu[0].style.visibility = 'visible';
                     }
@@ -250,6 +264,10 @@ addEventListener("DOMContentLoaded", () => {
                         menu[9].style.visibility = 'visible';
                     }
                     setTimeout(opac9, 490);
+                    function opac10() {
+                        menu[10].style.visibility = 'visible';
+                    }
+                    setTimeout(opac10, 490);
                     searchbar.value = '';
                 }
                 for (let i = 0; i < document.getElementsByClassName('sbuts').length; i++) {
@@ -316,7 +334,7 @@ addEventListener("DOMContentLoaded", () => {
                     searchim.style.display = 'none';
                     closeSearch.style.display = 'none';
                     searchbar.style.display = 'none';
-                    for (let i = 0; i < 10; i++) {
+                    for (let i = 0; i < 11; i++) {
                         menu[i].style.display = 'inline';
                     }
                 }
@@ -331,6 +349,7 @@ addEventListener("DOMContentLoaded", () => {
                 menu[7].animate([{ opacity: '0' }, { opacity: '1' }], 470);
                 menu[8].animate([{ opacity: '0' }, { opacity: '1' }], 480);
                 menu[9].animate([{ opacity: '0' }, { opacity: '1' }], 490);
+                menu[10].animate([{ opacity: '0' }, { opacity: '1' }], 490);
                 function opac0() {
                     menu[0].style.visibility = 'visible';
                 }
@@ -376,6 +395,10 @@ addEventListener("DOMContentLoaded", () => {
                     menu[9].style.visibility = 'visible';
                 }
                 setTimeout(opac9, 490);
+                function opac10() {
+                    menu[10].style.visibility = 'visible';
+                }
+                setTimeout(opac10, 490);
                 searchbar.value = '';
             }
         }

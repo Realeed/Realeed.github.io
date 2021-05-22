@@ -144,6 +144,12 @@ select option:checked {
     cursor: pointer;
     -webkit-user-drag: none;
 }
+#langImg {
+    width: 22px;
+    margin-top: 5px;
+    cursor: pointer;
+    -webkit-user-drag: none;
+}
 #slang {
     background-color: rgb(40, 40, 40);
     outline: none;
