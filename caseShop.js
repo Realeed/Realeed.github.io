@@ -61,7 +61,7 @@ addEventListener("DOMContentLoaded", () => {
         document.getElementById('langtab').style.display = 'none';
         langImg.src = 'data/lang.png';
     }
-    document.getElementById('langHay').onclick = () => {
+    function trsarm() {
         document.body.style.visibility = 'hidden';
         setTimeout(makeVis, 500);
         document.getElementById('langHay').disabled = true;
@@ -72,7 +72,16 @@ addEventListener("DOMContentLoaded", () => {
         document.getElementById('langEng').style.cursor = 'pointer';
         document.getElementById('iphone12txt').innerHTML = 'Հայերենը շուտով։)';
     }
+    document.getElementById('langHay').onclick = () => {
+        trsarm();
+    }
+    document.getElementById('arm').onclick = () => {
+        trsarm();
+    }
     document.getElementById('langEng').onclick = () => {
+        window.location.reload();
+    }
+    document.getElementById('eng').onclick = () => {
         window.location.reload();
     }
     for (let i = 0; i < 2; i++) {
