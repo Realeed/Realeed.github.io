@@ -50,14 +50,18 @@ addEventListener("DOMContentLoaded", () => {
         bagImg.src = 'data/bag.png';
     }
     document.getElementById('langHay').onclick = () => {
-        document.getElementById('iphone12txt').innerHTML = 'Հայերենը շուտով։)';
+        document.body.style.visibility = 'hidden';
+        setTimeout(makeVis, 500);
+        document.getElementById('langHay').disabled = true;
+        document.getElementById('langHay').style.color = 'rgb(150, 150, 150)';
+        document.getElementById('langHay').style.cursor = 'default';
         document.getElementById('langEng').disabled = false;
-        document.getElementById('langEng').style.color = 'white';
+        document.getElementById('langEng').style.color = 'rgb(190, 190, 190)';
         document.getElementById('langEng').style.cursor = 'pointer';
-
+        document.getElementById('iphone12txt').innerHTML = 'Հայերենը շուտով։)';
     }
     document.getElementById('langEng').onclick = () => {
-        document.getElementById('iphone12txt').innerHTML = 'iPhone Cases';
+        window.location.reload();
     }
     for (let i = 0; i < 2; i++) {
         closeCountry[i].onclick = () => {

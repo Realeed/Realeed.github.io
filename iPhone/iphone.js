@@ -23,6 +23,19 @@ addEventListener("DOMContentLoaded", () => {
     bagBut.onmouseleave = () => {
         bagImg.src = '../data/bag.png';
     }
+    document.getElementById('langHay').onclick = () => {
+        document.body.style.visibility = 'hidden';
+        setTimeout(makeVis, 500);
+        document.getElementById('langHay').disabled = true;
+        document.getElementById('langHay').style.color = 'rgb(150, 150, 150)';
+        document.getElementById('langHay').style.cursor = 'default';
+        document.getElementById('langEng').disabled = false;
+        document.getElementById('langEng').style.color = 'rgb(190, 190, 190)';
+        document.getElementById('langEng').style.cursor = 'pointer';
+    }
+    document.getElementById('langEng').onclick = () => {
+        window.location.reload();
+    }
     const searchbar = document.createElement('input');
     searchbar.placeholder = 'Search casessouel.com';
     searchbar.style.height = '26px';
