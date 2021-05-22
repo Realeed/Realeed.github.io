@@ -83,6 +83,8 @@ addEventListener("DOMContentLoaded", () => {
         menu[5].animate([{ opacity: '1' }, { opacity: '0' }], 150);
         menu[6].animate([{ opacity: '1' }, { opacity: '0' }], 100);
         menu[7].animate([{ opacity: '1' }, { opacity: '0' }], 50);
+        menu[8].animate([{ opacity: '1' }, { opacity: '0' }], 30);
+        menu[9].animate([{ opacity: '1' }, { opacity: '0' }], 10);
         function opac0() {
             menu[0].style.visibility = 'hidden';
         }
@@ -121,8 +123,16 @@ addEventListener("DOMContentLoaded", () => {
             menu[7].style.visibility = 'hidden';
         }
         setTimeout(opac7, 40);
+        function opac8() {
+            menu[8].style.visibility = 'hidden';
+        }
+        setTimeout(opac8, 20);
+        function opac9() {
+            menu[9].style.visibility = 'hidden';
+        }
+        setTimeout(opac9, 0);
         function search() {
-            for (let i = 0; i < 8; i++) {
+            for (let i = 0; i < 10; i++) {
                 menu[i].style.display = 'none';
             }
             if (window.pageYOffset > 0) {
@@ -180,7 +190,7 @@ addEventListener("DOMContentLoaded", () => {
                         searchim.style.display = 'none';
                         closeSearch.style.display = 'none';
                         searchbar.style.display = 'none';
-                        for (let i = 0; i < 8; i++) {
+                        for (let i = 0; i < 10; i++) {
                             menu[i].style.display = 'inline';
                         }
                     }
@@ -193,6 +203,8 @@ addEventListener("DOMContentLoaded", () => {
                     menu[5].animate([{ opacity: '0' }, { opacity: '1' }], 450);
                     menu[6].animate([{ opacity: '0' }, { opacity: '1' }], 460);
                     menu[7].animate([{ opacity: '0' }, { opacity: '1' }], 470);
+                    menu[8].animate([{ opacity: '0' }, { opacity: '1' }], 480);
+                    menu[9].animate([{ opacity: '0' }, { opacity: '1' }], 490);
                     function opac0() {
                         menu[0].style.visibility = 'visible';
                     }
@@ -230,6 +242,14 @@ addEventListener("DOMContentLoaded", () => {
                         menu[7].style.visibility = 'visible';
                     }
                     setTimeout(opac7, 470);
+                    function opac8() {
+                        menu[8].style.visibility = 'visible';
+                    }
+                    setTimeout(opac8, 480);
+                    function opac9() {
+                        menu[9].style.visibility = 'visible';
+                    }
+                    setTimeout(opac9, 490);
                     searchbar.value = '';
                 }
                 for (let i = 0; i < document.getElementsByClassName('sbuts').length; i++) {
@@ -296,7 +316,7 @@ addEventListener("DOMContentLoaded", () => {
                     searchim.style.display = 'none';
                     closeSearch.style.display = 'none';
                     searchbar.style.display = 'none';
-                    for (let i = 0; i < 8; i++) {
+                    for (let i = 0; i < 10; i++) {
                         menu[i].style.display = 'inline';
                     }
                 }
@@ -309,6 +329,8 @@ addEventListener("DOMContentLoaded", () => {
                 menu[5].animate([{ opacity: '0' }, { opacity: '1' }], 450);
                 menu[6].animate([{ opacity: '0' }, { opacity: '1' }], 460);
                 menu[7].animate([{ opacity: '0' }, { opacity: '1' }], 470);
+                menu[8].animate([{ opacity: '0' }, { opacity: '1' }], 480);
+                menu[9].animate([{ opacity: '0' }, { opacity: '1' }], 490);
                 function opac0() {
                     menu[0].style.visibility = 'visible';
                 }
@@ -346,6 +368,14 @@ addEventListener("DOMContentLoaded", () => {
                     menu[7].style.visibility = 'visible';
                 }
                 setTimeout(opac7, 470);
+                function opac8() {
+                    menu[8].style.visibility = 'visible';
+                }
+                setTimeout(opac8, 480);
+                function opac9() {
+                    menu[9].style.visibility = 'visible';
+                }
+                setTimeout(opac9, 490);
                 searchbar.value = '';
             }
         }
