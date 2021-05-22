@@ -53,9 +53,13 @@ addEventListener("DOMContentLoaded", () => {
     }
     langBut.onmouseenter = () => {
         langImg.src = 'data/langwh.png';
+        document.getElementById('langtab').style.display = 'block';
     }
     langBut.onmouseleave = () => {
         langImg.src = 'data/lang.png';
+    }
+    document.getElementById('menu').onmouseleave = () => {
+        document.getElementById('langtab').style.display = 'none';
     }
     document.getElementById('langHay').onclick = () => {
         document.body.style.visibility = 'hidden';

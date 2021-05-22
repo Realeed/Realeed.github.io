@@ -198,6 +198,26 @@ select option:checked {
     opacity: 0;
     display: none;
 }
+#langtab {
+    width: 10%;
+    margin-left: 70%;
+    background-color: rgb(190, 190, 190);
+    position: fixed;
+    border-radius: 10px;
+    display: none;
+}
+.langsopt {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 15px;
+    font-size: 15px;
+    color: rgb(70, 70, 70);
+}
+.langsopt:hover {
+    color: black;
+}
 @media (max-width: 1200px) {
     #stxt {
         margin-left: -10%;
