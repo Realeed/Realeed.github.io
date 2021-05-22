@@ -209,17 +209,20 @@ body {
     -webkit-user-drag: none;
 }
 #imagePrev {
-    margin-top: 50px;
+    margin-top: 100px;
     margin-left: 220px;
     height: 550px;
     display: none;
 }
+.infotd {
+    padding-right: 50px;
+}
 #headerPrev {
+    margin-top: -140px;
     font-weight: 540;
 }
 #prcPrev {
     font-size: 25px;
-    margin-top: -10px;
     color: rgb(120, 120, 120);
 }
 #descPrev {
