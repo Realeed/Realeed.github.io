@@ -306,7 +306,7 @@ addEventListener("DOMContentLoaded", () => {
             alert('hi');
         }
     }
-    onkeypress = key => {
+    document.getElementById('admpasscode').onkeypress = key => {
         if(key.code == 'Enter' && document.getElementById('admpasscode').value == 'cham') {
             document.getElementById('passcodediv').style.display = 'none';
             start();
