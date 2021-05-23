@@ -60,6 +60,10 @@ addEventListener("DOMContentLoaded", () => {
         bagImg.src = 'data/bag.png';
         document.getElementById('bagtab').style.visibility = 'hidden';
     }
+    document.getElementById('langHay').onmouseenter = () => {
+        langImg.src = 'data/lang.png';
+        document.getElementById('langtab').style.visibility = 'hidden';
+    }
     document.getElementById('menu').onmouseleave = () => {
         document.getElementById('langtab').style.visibility = 'hidden'
         langImg.src = 'data/lang.png';
