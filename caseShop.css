@@ -220,6 +220,7 @@ select option:checked {
     color: rgb(60, 80, 235);
     font-family: sans-serif;
     font-size: 13px;
+    padding-right: 80px;
 }
 .baghref:hover {
     text-decoration: underline;
