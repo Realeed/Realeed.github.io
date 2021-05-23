@@ -14,6 +14,7 @@ body {
     color: rgb(228, 228, 228);
     position: fixed; 
     user-select: none;
+    display: none;
 }
 #logoBut {
     width: 40px;
@@ -114,6 +115,17 @@ body {
         margin: auto;
     }
 }
+#admpasscode {
+    width: 400px;
+    height: 30px;
+    font-size: 20px;
+    outline: none;
+}
+#admsubmit {
+    height: 35px;
+    cursor: pointer;
+    margin-left: 20px;
+}
 #addprdhead {
     margin: 0;
     padding-top: 120px;
@@ -126,6 +138,7 @@ body {
 }
 #newProduct {
     width: 100%;
+    display: none;
 }
 #newProducttab {
     width: 70%;
