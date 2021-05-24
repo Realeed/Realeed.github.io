@@ -138,16 +138,20 @@ select option:checked {
     cursor: pointer;
     -webkit-user-drag: none;
 }
+#menubag {
+    cursor: default;
+}
+#menulang {
+    cursor: default;
+}
 #bagImg {
     width: 22px;
     margin-top: 5px;
-    cursor: pointer;
     -webkit-user-drag: none;
 }
 #langImg {
     width: 22px;
     margin-top: 5px;
-    cursor: pointer;
     -webkit-user-drag: none;
 }
 #slang {
