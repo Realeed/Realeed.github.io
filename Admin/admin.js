@@ -5,6 +5,7 @@ addEventListener("DOMContentLoaded", () => {
             document.body.style.visibility = 'visible';
         }
         setTimeout(makeVis, 500);
+        document.getElementById('passcodediv').style.display = 'none';
         document.getElementById('menu').style.display = 'block';
         document.getElementById('newProduct').style.display = 'block'
         const searchBut = document.getElementById('menusearch');
@@ -306,9 +307,14 @@ addEventListener("DOMContentLoaded", () => {
             alert('hi');
         }
     }
+    if (localStorage.getItem('verified') == 'true') {
+        start();
+    }
     document.getElementById('admpasscode').onkeypress = key => {
         if(key.code == 'Enter' && document.getElementById('admpasscode').value == 'cham') {
-            document.getElementById('passcodediv').style.display = 'none';
+            if (!localStorage.getItem('verified')) {
+                localStorage.setItem('verified', true);
+            }
             start();
         } else if (key.code == 'Enter' && document.getElementById('admpasscode').value != 'cham') {
             document.getElementById('admpasscode').value = '';
@@ -317,7 +323,6 @@ addEventListener("DOMContentLoaded", () => {
     }
     document.getElementById('admsubmit').onclick = () => {
         if (document.getElementById('admpasscode').value == 'cham') {
-            document.getElementById('passcodediv').style.display = 'none';
             start();
         } else {
             document.getElementById('admpasscode').value = '';
