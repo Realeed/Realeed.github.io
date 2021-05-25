@@ -49,13 +49,18 @@ app.post('/addproduct', urlencodedParser, (req, res) => {
                 const storedHash = result[0].passcode
                 if (hash == storedHash) {
                     res.sendFile('C:/Soft/caseShop/Admin/addproduct.html')
+                    console.log('Accessed!')
                 } else {
                     res.send('Incorrect passcode!')
+                    console.log('Failed to access!')
                 }
             })
             .catch(err => console.log(err))
         })
-        .catch(err => console.log(err))
+        .catch(err => {
+            res.send('Error: 404')
+            console.log(err)
+        })
 })
 
 app.listen(port, () => console.log(`Listening to port... ${port}`))
