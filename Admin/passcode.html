@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Administrator</title>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <style>
+        #admpasscode {
+            width: 400px;
+            height: 30px;
+            font-size: 18px;
+            outline: none;
+        }
+
+        #admsubmit {
+            height: 35px;
+            cursor: pointer;
+            margin-left: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="passcodediv" style="width: 100%; position: fixed; margin: 10px;">
+        <table>
+            <tr>
+                <td>
+                    <form action="../addproduct" method="POST">
+                        <input type="password" name="passcode" id="admpasscode" placeholder="Enter the passcode" autofocus>
+                        <button type="submit" id="admsubmit">Submit</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
