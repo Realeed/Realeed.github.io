@@ -13,6 +13,7 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 app.use(express.static('../'))
 app.use(express.static('../Admin'))
+app.use(express.static('../Careers'))
 
 app.get('/iphone', (req, res) => {
     res.sendFile('C:/Soft/caseShop/iPhone/iphone.html')
@@ -35,9 +36,11 @@ app.get('/airpod', (req, res) => {
 app.get('/covid', (req, res) => {
     res.sendFile('C:/Soft/caseShop/Covid/covid.html')
 })
-
 app.get('/admin', (req, res) => {
     res.sendFile('C:/Soft/caseShop/Admin/passcode.html')
+})
+app.get('/addproduct', (req, res) => {
+    res.send('You cannot reach this page!')
 })
 app.post('/addproduct', urlencodedParser, (req, res) => {
     mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -49,10 +52,10 @@ app.post('/addproduct', urlencodedParser, (req, res) => {
                 const storedHash = result[0].passcode
                 if (hash == storedHash) {
                     res.sendFile('C:/Soft/caseShop/Admin/addproduct.html')
-                    console.log('Accessed!')
+                    console.log('Accessed to the admin page!')
                 } else {
                     res.send('Incorrect passcode!')
-                    console.log('Failed to access!')
+                    console.log('Failed to access to the admin page!')
                 }
             })
             .catch(err => console.log(err))
@@ -61,6 +64,9 @@ app.post('/addproduct', urlencodedParser, (req, res) => {
             res.send('Error: 404')
             console.log(err)
         })
+})
+app.get('/career', (req, res) => {
+    res.sendFile('C:/Soft/caseShop/Careers/jobs.html')
 })
 
 app.listen(port, () => console.log(`Listening to port... ${port}`))

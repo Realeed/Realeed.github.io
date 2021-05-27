@@ -3,7 +3,7 @@ addEventListener("DOMContentLoaded", () => {
     function makeVis() {
         document.body.style.visibility = 'visible';
     }
-    setTimeout(makeVis, 500);
+    setTimeout(makeVis, 1000);
     if (localStorage.getItem('country_is_closed')) {
         document.getElementById('scountry').style.display = 'none';
         document.getElementById('scountryMob').style.display = 'none';

@@ -4,38 +4,22 @@ addEventListener("DOMContentLoaded", () => {
         document.body.style.visibility = 'visible';
     }
     setTimeout(makeVis, 1000);
-    document.getElementById('menuiphone').onclick = () => {
-        return false;
+    if (localStorage.getItem('country_is_closed')) {
+        document.getElementById('scountry').style.display = 'none';
+        document.getElementById('scountryMob').style.display = 'none';
+        document.getElementById('menu').style.marginTop = '0px';
+        document.getElementById('covid').style.paddingTop = '42px';
     }
+    const closeCountry = document.getElementsByClassName('closeCountry');
     const searchBut = document.getElementById('menusearch');
     const searchImg = document.getElementById('searchImg');
     const bagBut = document.getElementById('menubag');
     const bagImg = document.getElementById('bagImg');
-    searchBut.onmouseenter = () => {
-        searchImg.src = '../data/searchwh.png';
-    }
-    searchBut.onmouseleave = () => {
-        searchImg.src = '../data/search.png';
-    }
-    bagBut.onmouseenter = () => {
-        bagImg.src = '../data/bagwh.png';
-    }
-    bagBut.onmouseleave = () => {
-        bagImg.src = '../data/bag.png';
-    }
-    document.getElementById('langHay').onclick = () => {
-        document.body.style.visibility = 'hidden';
-        setTimeout(makeVis, 500);
-        document.getElementById('langHay').disabled = true;
-        document.getElementById('langHay').style.color = 'rgb(150, 150, 150)';
-        document.getElementById('langHay').style.cursor = 'default';
-        document.getElementById('langEng').disabled = false;
-        document.getElementById('langEng').style.color = 'rgb(190, 190, 190)';
-        document.getElementById('langEng').style.cursor = 'pointer';
-    }
-    document.getElementById('langEng').onclick = () => {
-        window.location.reload();
-    }
+    const langBut = document.getElementById('menulang');
+    const langImg = document.getElementById('langImg');
+    const menu = document.getElementsByClassName('menu');
+    const country = document.getElementsByClassName('selectCountry')[0];
+    const countryMob = document.getElementsByClassName('selectCountry')[1];
     const searchbar = document.createElement('input');
     searchbar.placeholder = 'Search casessouel.com';
     searchbar.style.height = '26px';
@@ -49,11 +33,75 @@ addEventListener("DOMContentLoaded", () => {
     searchbar.style.color = 'rgb(220, 220, 220)';
     searchbar.spellcheck = false;
     searchbar.autofocus = true;
-    const menu = document.getElementsByClassName('menu');
     window.onscroll = () => {
-        document.getElementById('menu').style.backgroundColor = 'rgb(40, 40, 40, 0.85)';
+        document.getElementById('menu').style.backgroundColor = 'rgb(40, 40, 40, 0.9)';
         if (window.pageYOffset == 0) {
             document.getElementById('menu').style.backgroundColor = 'rgb(40, 40, 40)';
+        }
+    }
+    searchBut.onmouseenter = () => {
+        searchImg.src = 'data/searchwh.png';
+        bagImg.src = 'data/bag.png';
+        document.getElementById('bagtab').style.visibility = 'hidden';
+    }
+    searchBut.onmouseleave = () => {
+        searchImg.src = 'data/search.png';
+    }
+    bagBut.onmouseenter = () => {
+        bagImg.src = 'data/bagwh.png';
+        document.getElementById('bagtab').style.visibility = 'visible';
+        langImg.src = 'data/lang.png';
+        document.getElementById('langtab').style.visibility = 'hidden';
+        
+    }
+    langBut.onmouseenter = () => {
+        langImg.src = 'data/langwh.png';
+        document.getElementById('langtab').style.visibility = 'visible';
+        bagImg.src = 'data/bag.png';
+        document.getElementById('bagtab').style.visibility = 'hidden';
+    }
+    document.getElementById('langHay').onmouseenter = () => {
+        langImg.src = 'data/lang.png';
+        document.getElementById('langtab').style.visibility = 'hidden';
+    }
+    document.getElementById('menu').onmouseleave = () => {
+        document.getElementById('langtab').style.visibility = 'hidden'
+        langImg.src = 'data/lang.png';
+        document.getElementById('bagtab').style.visibility = 'hidden';
+        bagImg.src = 'data/bag.png';
+    }
+    function trsarm() {
+        document.body.style.visibility = 'hidden';
+        setTimeout(makeVis, 500);
+        document.getElementById('langHay').disabled = true;
+        document.getElementById('langHay').style.color = 'rgb(150, 150, 150)';
+        document.getElementById('langHay').style.cursor = 'default';
+        document.getElementById('langEng').disabled = false;
+        document.getElementById('langEng').style.color = 'rgb(190, 190, 190)';
+        document.getElementById('langEng').style.cursor = 'pointer';
+        document.getElementById('iphone12txt').innerHTML = 'Հայերենը շուտով։)';
+    }
+    document.getElementById('langHay').onclick = () => {
+        trsarm();
+    }
+    document.getElementById('arm').onclick = () => {
+        trsarm();
+    }
+    document.getElementById('langEng').onclick = () => {
+        window.location.reload();
+    }
+    document.getElementById('eng').onclick = () => {
+        window.location.reload();
+    }
+    for (let i = 0; i < 2; i++) {
+        closeCountry[i].onclick = () => {
+            if (!localStorage.getItem('country_is_closed')) {
+                localStorage.setItem('country_is_closed', true)
+            }
+            document.getElementById('scountry').style.display = 'none';
+            document.getElementById('scountryMob').style.display = 'none';
+            document.getElementById('menu').style.marginTop = '0px';
+            document.getElementById('covid').style.paddingTop = '42px';
         }
     }
     searchBut.onclick = () => {
@@ -65,6 +113,9 @@ addEventListener("DOMContentLoaded", () => {
         menu[5].animate([{ opacity: '1' }, { opacity: '0' }], 150);
         menu[6].animate([{ opacity: '1' }, { opacity: '0' }], 100);
         menu[7].animate([{ opacity: '1' }, { opacity: '0' }], 50);
+        menu[8].animate([{ opacity: '1' }, { opacity: '0' }], 30);
+        menu[9].animate([{ opacity: '1' }, { opacity: '0' }], 10);
+        menu[10].animate([{ opacity: '1' }, { opacity: '0' }], 10);
         function opac0() {
             menu[0].style.visibility = 'hidden';
         }
@@ -103,8 +154,20 @@ addEventListener("DOMContentLoaded", () => {
             menu[7].style.visibility = 'hidden';
         }
         setTimeout(opac7, 40);
+        function opac8() {
+            menu[8].style.visibility = 'hidden';
+        }
+        setTimeout(opac8, 20);
+        function opac9() {
+            menu[9].style.visibility = 'hidden';
+        }
+        setTimeout(opac9, 0);
+        function opac10() {
+            menu[10].style.visibility = 'hidden';
+        }
+        setTimeout(opac10, 0);
         function search() {
-            for (let i = 0; i < 8; i++) {
+            for (let i = 0; i < 11; i++) {
                 menu[i].style.display = 'none';
             }
             if (window.pageYOffset > 0) {
@@ -125,7 +188,7 @@ addEventListener("DOMContentLoaded", () => {
             document.getElementById('stxt').style.opacity = '0.5';
             document.body.style.overflowY = 'hidden';
             const searchim = document.createElement('img');
-            searchim.src = '../data/search.png';
+            searchim.src = 'data/search.png';
             searchim.style.width = '25px';
             searchim.style.marginBottom = '-6px';
             document.getElementById('menu').appendChild(searchim);
@@ -143,7 +206,7 @@ addEventListener("DOMContentLoaded", () => {
                         searchim.style.display = 'none';
                         closeSearch.style.display = 'none';
                         searchbar.style.display = 'none';
-                        for (let i = 0; i < 8; i++) {
+                        for (let i = 0; i < 11; i++) {
                             menu[i].style.display = 'inline';
                         }
                     }
@@ -156,6 +219,9 @@ addEventListener("DOMContentLoaded", () => {
                     menu[5].animate([{ opacity: '0' }, { opacity: '1' }], 450);
                     menu[6].animate([{ opacity: '0' }, { opacity: '1' }], 460);
                     menu[7].animate([{ opacity: '0' }, { opacity: '1' }], 470);
+                    menu[8].animate([{ opacity: '0' }, { opacity: '1' }], 480);
+                    menu[9].animate([{ opacity: '0' }, { opacity: '1' }], 490);
+                    menu[10].animate([{ opacity: '0' }, { opacity: '1' }], 490);
                     function opac0() {
                         menu[0].style.visibility = 'visible';
                     }
@@ -193,6 +259,18 @@ addEventListener("DOMContentLoaded", () => {
                         menu[7].style.visibility = 'visible';
                     }
                     setTimeout(opac7, 470);
+                    function opac8() {
+                        menu[8].style.visibility = 'visible';
+                    }
+                    setTimeout(opac8, 480);
+                    function opac9() {
+                        menu[9].style.visibility = 'visible';
+                    }
+                    setTimeout(opac9, 490);
+                    function opac10() {
+                        menu[10].style.visibility = 'visible';
+                    }
+                    setTimeout(opac10, 490);
                     searchbar.value = '';
                 }
                 for (let i = 0; i < document.getElementsByClassName('sbuts').length; i++) {
@@ -244,7 +322,7 @@ addEventListener("DOMContentLoaded", () => {
                     searchim.style.display = 'none';
                     closeSearch.style.display = 'none';
                     searchbar.style.display = 'none';
-                    for (let i = 0; i < 8; i++) {
+                    for (let i = 0; i < 11; i++) {
                         menu[i].style.display = 'inline';
                     }
                 }
@@ -257,6 +335,9 @@ addEventListener("DOMContentLoaded", () => {
                 menu[5].animate([{ opacity: '0' }, { opacity: '1' }], 450);
                 menu[6].animate([{ opacity: '0' }, { opacity: '1' }], 460);
                 menu[7].animate([{ opacity: '0' }, { opacity: '1' }], 470);
+                menu[8].animate([{ opacity: '0' }, { opacity: '1' }], 480);
+                menu[9].animate([{ opacity: '0' }, { opacity: '1' }], 490);
+                menu[10].animate([{ opacity: '0' }, { opacity: '1' }], 490);
                 function opac0() {
                     menu[0].style.visibility = 'visible';
                 }
@@ -294,33 +375,21 @@ addEventListener("DOMContentLoaded", () => {
                     menu[7].style.visibility = 'visible';
                 }
                 setTimeout(opac7, 470);
+                function opac8() {
+                    menu[8].style.visibility = 'visible';
+                }
+                setTimeout(opac8, 480);
+                function opac9() {
+                    menu[9].style.visibility = 'visible';
+                }
+                setTimeout(opac9, 490);
+                function opac10() {
+                    menu[10].style.visibility = 'visible';
+                }
+                setTimeout(opac10, 490);
                 searchbar.value = '';
             }
         }
         setTimeout(search, 300);
-    }
-    let case1 = document.getElementById('iphoneCasebut1');
-    let descr1 = document.getElementById('iphoneCaseDes1');
-    let case2 = document.getElementById('iphoneCasebut2');
-    let descr2 = document.getElementById('iphoneCaseDes2');
-    let case3 = document.getElementById('iphoneCasebut3');
-    let descr3 = document.getElementById('iphoneCaseDes3');
-    case1.onmouseenter = () => {
-        descr1.style.color = 'rgb(68, 100, 230)';
-    }
-    case1.onmouseleave = () => {
-        descr1.style.color = 'rgb(70, 70, 70)';
-    }
-    case2.onmouseenter = () => {
-        descr2.style.color = 'rgb(68, 100, 230)';
-    }
-    case2.onmouseleave = () => {
-        descr2.style.color = 'rgb(70, 70, 70)';
-    }
-    case3.onmouseenter = () => {
-        descr3.style.color = 'rgb(68, 100, 230)';
-    }
-    case3.onmouseleave = () => {
-        descr3.style.color = 'rgb(70, 70, 70)';
     }
 })
