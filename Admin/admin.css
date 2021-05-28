@@ -201,16 +201,14 @@ body {
 }
 #descPrevtab {
     margin: auto;
-    margin-left: 850px;
-    margin-top: 35px;
+    margin-left: 200px;
+    padding-top: 500px;
     font-family: sans-serif;
     color: rgb(50, 50, 50);
     user-select: none;
     -webkit-user-drag: none;
 }
 #imagePrev {
-    margin-top: 100px;
-    margin-left: 220px;
     height: 550px;
     display: none;
 }
@@ -218,12 +216,16 @@ body {
     padding-right: 50px;
 }
 #headerPrev {
+    margin-left: 50px;
     font-weight: 540;
 }
 #prcPrev {
+    margin-left: 50px;
     font-size: 25px;
     color: rgb(120, 120, 120);
 }
 #descPrev {
+    margin-left: 50px;
     font-size: 18px;
+    padding-bottom: 450px;
 }
