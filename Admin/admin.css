@@ -227,5 +227,10 @@ body {
 #descPrev {
     margin-left: 50px;
     font-size: 18px;
-    padding-bottom: 450px;
+}
+.selectButs {
+    background-color: transparent;
+    border: solid black 1px;
+    cursor: pointer;
+    margin-left: 20px;
 }
