@@ -289,7 +289,7 @@ addEventListener("DOMContentLoaded", () => {
         document.getElementById('imageInp').onchange = function loadFile(event) {
             document.getElementById('imagePrev').src = URL.createObjectURL(event.target.files[0]);
             document.getElementById('imagePrev').style.display = 'inline';
-            document.getElementById('descPrevtab').style.marginTop = '-419px';
+            document.getElementById('descPrevtab').style.marginTop = '-578px';
 
             return false;
         }
@@ -302,8 +302,40 @@ addEventListener("DOMContentLoaded", () => {
         document.getElementById('productPrc').onkeyup = () => {
             document.getElementById('prcPrev').innerHTML = document.getElementById('productPrc').value;
         }
-        document.getElementById('addProdbut').onclick = () => {
-            alert('hi');
+        document.getElementById('prevProdbut').onclick = () => {
+            window.scrollTo(0, document.body.scrollHeight);
+
+        }
+        let imgArr = [];
+        let counter = 0;
+        document.getElementById('optImage').onchange = function loadFile(event) {
+            let optImg = document.createElement('img');
+            optImg.src = URL.createObjectURL(event.target.files[0]);
+            optImg.style.width = '40px';
+            let optBut = document.createElement('button');
+            optBut.style.marginLeft = '20px';
+            optBut.style.marginTop = '20px';
+            optBut.style.paddingTop = '5px';
+            optBut.style.cursor = 'pointer';
+            optBut.style.backgroundColor = 'white';
+            optBut.style.borderWidth = '1px';
+            optBut.appendChild(optImg);
+            document.getElementById('opttd').appendChild(optBut);
+            imgArr[counter] = optBut;
+            for (let i = 0; i < imgArr.length; i++) {
+                imgArr[i].onclick = () => {
+                    for (let j = 0; j < imgArr.length; j++) {
+                        if (imgArr[j].style.borderColor == 'rgb(40, 90, 255)') {
+                            imgArr[j].style.borderColor = 'black';
+                            imgArr[j].style.borderWidth = '1px';
+                        }
+                    }
+                    imgArr[i].style.borderColor = 'rgb(40, 90, 255)';
+                    imgArr[i].style.borderWidth = '2px';
+                }
+            }
+            counter++;
+            return false;
         }
     }
     start();
