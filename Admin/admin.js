@@ -286,14 +286,44 @@ addEventListener("DOMContentLoaded", () => {
             }
             setTimeout(search, 300);
         }
+        let imgCounter = 0;
         document.getElementById('imageInp').onchange = function loadFile(event) {
-            document.getElementById('imagePrev').src = URL.createObjectURL(event.target.files[0]);
-            document.getElementById('imagePrev').style.display = 'inline';
-            document.getElementById('descPrevtab').style.marginTop = '-578px';
+            document.getElementById('prevProdbut').disabled = false;
+            document.getElementById('prevProdbut').style.cursor = 'pointer';
+            document.getElementById('addProdbut').disabled = false;
+            document.getElementById('addProdbut').style.cursor = 'pointer';
+            if (imgCounter == 0) {
+                document.getElementById('imagePrev').src = URL.createObjectURL(event.target.files[0]);
+                document.getElementsByClassName('imageOptbut')[imgCounter].style.borderColor = 'rgb(40, 90, 255)';
+                document.getElementsByClassName('imageOptbut')[imgCounter].style.borderWidth = '2px';
+            }
+            if (!(imgCounter >= 7)) {
+                document.getElementsByClassName('imageOpt')[imgCounter].src = URL.createObjectURL(event.target.files[0]);
+                document.getElementsByClassName('imageOptbut')[imgCounter].style.visibility = 'visible';
+                document.getElementById('imagePrev').style.display = 'inline';
+                let marg = -430;
+                document.getElementById('descPrevtab').style.marginTop = (marg - imgCounter * 28) + 'px';
+                document.getElementById('imageOpttab').style.visibility = 'visible';
+            } else {
+                alert('Cannot insert more than 7 photos!');
+            }
             for (let i = 0; i < 2; i++) {
                 document.getElementsByClassName('buybut')[i].style.visibility = 'visible';
             }
-            
+            imgCounter++;
+            for (let i = 0; i < 7; i++) {
+                document.getElementsByClassName('imageOptbut')[i].onmouseenter = function() {
+                    for (let j = 0; j < 7; j++) {
+                        if (document.getElementsByClassName('imageOptbut')[j].style.borderWidth == '2px') {
+                            document.getElementsByClassName('imageOptbut')[j].style.borderWidth = '1px';
+                            document.getElementsByClassName('imageOptbut')[j].style.borderColor = 'black';
+                        }
+                    }
+                    document.getElementsByClassName('imageOptbut')[i].style.borderWidth = '2px';
+                    document.getElementsByClassName('imageOptbut')[i].style.borderColor = 'rgb(40, 90, 255)';
+                    document.getElementById('imagePrev').src = document.getElementsByClassName('imageOpt')[i].src;
+                }
+            }
             return false;
         }
         document.getElementById('productHeader').onkeyup = () => {
@@ -328,7 +358,7 @@ addEventListener("DOMContentLoaded", () => {
             for (let i = 0; i < imgArr.length; i++) {
                 imgArr[i].onclick = () => {
                     for (let j = 0; j < imgArr.length; j++) {
-                        if (imgArr[j].style.borderColor == 'rgb(40, 90, 255)') {
+                        if (imgArr[j].style.borderWidth == '2px') {
                             imgArr[j].style.borderColor = 'black';
                             imgArr[j].style.borderWidth = '1px';
                         }
@@ -339,6 +369,9 @@ addEventListener("DOMContentLoaded", () => {
             }
             counter++;
             return false;
+        }
+        document.getElementById('addcartbut').onclick = function() {
+            alert('This feature will be available soon!');
         }
     }
     start();
