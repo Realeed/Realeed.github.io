@@ -290,7 +290,7 @@ addEventListener("DOMContentLoaded", () => {
             document.getElementById('imagePrev').src = URL.createObjectURL(event.target.files[0]);
             document.getElementById('imagePrev').style.display = 'inline';
             document.getElementById('descPrevtab').style.marginTop = '-578px';
-
+            
             return false;
         }
         document.getElementById('productHeader').onkeyup = () => {

@@ -5,7 +5,6 @@ const bodyParser = require('body-parser')
 const crypto = require('crypto')
 const mongoose = require('mongoose')
 const Passcode = require('./caseShopdb/mongodb')
-const { send } = require('process')
 
 const dbURI = 'mongodb+srv://realeed:covid.3355@caseshop.e4xmp.mongodb.net/caseShop?retryWrites=true&w=majority'
 
@@ -61,7 +60,7 @@ app.post('/addproduct', urlencodedParser, (req, res) => {
             .catch(err => console.log(err))
         })
         .catch(err => {
-            res.send('Error: 404')
+            res.send('Error has occured!!!')
             console.log(err)
         })
 })
