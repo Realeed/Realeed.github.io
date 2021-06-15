@@ -225,9 +225,12 @@ body {
     height: 550px;
     display: none;
 }
+#imagePrev:hover {
+    cursor: zoom-in;
+}
 .infotd {
     padding-left: 150px;
-    padding-right: 70px;
+    padding-right: 150px;
 }
 #headerPrev {
     font-weight: 500;
@@ -261,16 +264,17 @@ body {
     cursor: pointer;
     width: 90px;
     height: 36px;
+    visibility: hidden;
 }
 .buybut:hover {
     background-color: rgb(55, 105, 255);
 }
 #orderbut {
-    margin-top: 150px;
-    margin-left: 200px;
+    margin-top: 100px;
+    margin-left: 220px;
 }
 #addcartbut {
-    margin-top: 150px;
-    margin-left: 40px;
+    margin-top: 100px;
+    margin-left: 60px;
     width: 120px;
 }
