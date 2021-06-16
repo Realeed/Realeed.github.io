@@ -60,7 +60,7 @@ app.post('/addproduct', urlencodedParser, (req, res) => {
             .catch(err => console.log(err))
         })
         .catch(err => {
-            res.send('Error has occured!!!')
+            res.send('Something went wrong!!!')
             console.log(err)
         })
 })

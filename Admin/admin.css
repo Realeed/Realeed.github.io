@@ -221,20 +221,26 @@ body {
     background-color: transparent;
     border: solid black 1px;
     border-radius: 3px;
+    padding: 5px;
+    height: 58px;
     cursor: pointer;
     margin-left: 80px;
     margin-top: 20px;
     visibility: hidden;
 }
 .imageOpt {
-    padding-top: 5px;
-    width: 40px;
+    width: 45px;
 }
 #imagePrev {
     margin-left: 200px;
     padding-top: 150px;
     height: 550px;
     display: none;
+}
+.imgToggle {
+    margin-top: 20px;
+    cursor: pointer;
+    visibility: hidden;
 }
 .infotd {
     padding-left: 150px;

@@ -301,13 +301,14 @@ addEventListener("DOMContentLoaded", () => {
                 document.getElementsByClassName('imageOpt')[imgCounter].src = URL.createObjectURL(event.target.files[0]);
                 document.getElementsByClassName('imageOptbut')[imgCounter].style.visibility = 'visible';
                 document.getElementById('imagePrev').style.display = 'inline';
-                let marg = -430;
-                document.getElementById('descPrevtab').style.marginTop = (marg - imgCounter * 28) + 'px';
+                let marg = -650;
+                document.getElementById('descPrevtab').style.marginTop = (marg /*- imgCounter * 1*/) + 'px';
                 document.getElementById('imageOpttab').style.visibility = 'visible';
             } else {
                 alert('Cannot insert more than 7 photos!');
             }
             for (let i = 0; i < 2; i++) {
+                document.getElementsByClassName('imgToggle')[i].style.visibility = 'visible';
                 document.getElementsByClassName('buybut')[i].style.visibility = 'visible';
             }
             imgCounter++;
