@@ -239,6 +239,10 @@ body {
 }
 .imgToggle {
     margin-top: 20px;
+    background-color: transparent;
+    font-size: 40px;
+    color: rgb(140, 140, 140);
+    border: none;
     cursor: pointer;
     visibility: hidden;
 }

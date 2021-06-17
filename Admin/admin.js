@@ -311,21 +311,60 @@ addEventListener("DOMContentLoaded", () => {
                 document.getElementsByClassName('imgToggle')[i].style.visibility = 'visible';
                 document.getElementsByClassName('buybut')[i].style.visibility = 'visible';
             }
-            imgCounter++;
-            for (let i = 0; i < 7; i++) {
-                document.getElementsByClassName('imageOptbut')[i].onmouseenter = function() {
-                    for (let j = 0; j < 7; j++) {
-                        if (document.getElementsByClassName('imageOptbut')[j].style.borderWidth == '2px') {
-                            document.getElementsByClassName('imageOptbut')[j].style.borderWidth = '1px';
-                            document.getElementsByClassName('imageOptbut')[j].style.borderColor = 'black';
-                        }
-                    }
-                    document.getElementsByClassName('imageOptbut')[i].style.borderWidth = '2px';
-                    document.getElementsByClassName('imageOptbut')[i].style.borderColor = 'rgb(40, 90, 255)';
-                    document.getElementById('imagePrev').src = document.getElementsByClassName('imageOpt')[i].src;
-                }
+            if (imgCounter < 7) {
+                imgCounter++;
             }
             return false;
+        }
+        for (let i = 0; i < 7; i++) {
+            document.getElementsByClassName('imageOptbut')[i].onmouseenter = function() {
+                for (let j = 0; j < 7; j++) {
+                    if (document.getElementsByClassName('imageOptbut')[j].style.borderWidth == '2px') {
+                        document.getElementsByClassName('imageOptbut')[j].style.borderWidth = '1px';
+                        document.getElementsByClassName('imageOptbut')[j].style.borderColor = 'black';
+                    }
+                }
+                document.getElementsByClassName('imageOptbut')[i].style.borderWidth = '2px';
+                document.getElementsByClassName('imageOptbut')[i].style.borderColor = 'rgb(40, 90, 255)';
+                document.getElementById('imagePrev').src = document.getElementsByClassName('imageOpt')[i].src;
+            }
+        }
+        document.getElementsByClassName('imgToggle')[0].onclick = function() {
+            for (let i = 0; i < imgCounter + 1; i++) {
+                if (document.getElementsByClassName('imageOptbut')[i].style.borderWidth == '2px' && i > 0) {
+                    document.getElementsByClassName('imageOptbut')[i].style.borderWidth = '1px';
+                    document.getElementsByClassName('imageOptbut')[i].style.borderColor = 'black';
+                    document.getElementsByClassName('imageOptbut')[i - 1].style.borderWidth = '2px';
+                    document.getElementsByClassName('imageOptbut')[i - 1].style.borderColor = 'rgb(40, 90, 255)';
+                    document.getElementById('imagePrev').src = document.getElementsByClassName('imageOpt')[i - 1].src;
+                    return
+                }
+                else if (document.getElementsByClassName('imageOptbut')[i].style.borderWidth == '2px' && i == 0) {
+                    document.getElementsByClassName('imageOptbut')[0].style.borderWidth = '1px';
+                    document.getElementsByClassName('imageOptbut')[0].style.borderColor = 'black';
+                    document.getElementsByClassName('imageOptbut')[imgCounter].style.borderWidth = '2px';
+                    document.getElementsByClassName('imageOptbut')[imgCounter].style.borderColor = 'rgb(40, 90, 255)';
+                    document.getElementById('imagePrev').src = document.getElementsByClassName('imageOpt')[imgCounter].src;
+                }
+            }
+        }
+        document.getElementsByClassName('imgToggle')[1].onclick = function() {
+            for (let i = 0; i < imgCounter + 1; i++) {
+                if (document.getElementsByClassName('imageOptbut')[i].style.borderWidth == '2px' && i < imgCounter - 1) {
+                    document.getElementsByClassName('imageOptbut')[i].style.borderWidth = '1px';
+                    document.getElementsByClassName('imageOptbut')[i].style.borderColor = 'black';
+                    document.getElementsByClassName('imageOptbut')[i + 1].style.borderWidth = '2px';
+                    document.getElementsByClassName('imageOptbut')[i + 1].style.borderColor = 'rgb(40, 90, 255)';
+                    document.getElementById('imagePrev').src = document.getElementsByClassName('imageOpt')[i + 1].src;
+                    return
+                } else if (document.getElementsByClassName('imageOptbut')[i].style.borderWidth == '2px' && i == imgCounter - 1) {
+                    document.getElementsByClassName('imageOptbut')[imgCounter - 1].style.borderWidth = '1px';
+                    document.getElementsByClassName('imageOptbut')[imgCounter - 1].style.borderColor = 'black';
+                    document.getElementsByClassName('imageOptbut')[0].style.borderWidth = '2px';
+                    document.getElementsByClassName('imageOptbut')[0].style.borderColor = 'rgb(40, 90, 255)';
+                    document.getElementById('imagePrev').src = document.getElementsByClassName('imageOpt')[0].src;
+                }
+            }
         }
         document.getElementById('productHeader').onkeyup = () => {
             document.getElementById('headerPrev').innerHTML = document.getElementById('productHeader').value;
