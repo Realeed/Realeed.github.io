@@ -241,10 +241,13 @@ body {
     margin-top: 20px;
     background-color: transparent;
     font-size: 40px;
-    color: rgb(140, 140, 140);
+    color: rgb(120, 120, 120);
     border: none;
     cursor: pointer;
     visibility: hidden;
+}
+.imgToggle:hover {
+    color: rgb(170, 170, 170)
 }
 .infotd {
     padding-left: 150px;

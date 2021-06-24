@@ -339,13 +339,6 @@ addEventListener("DOMContentLoaded", () => {
                     document.getElementById('imagePrev').src = document.getElementsByClassName('imageOpt')[i - 1].src;
                     return
                 }
-                else if (document.getElementsByClassName('imageOptbut')[i].style.borderWidth == '2px' && i == 0) {
-                    document.getElementsByClassName('imageOptbut')[0].style.borderWidth = '1px';
-                    document.getElementsByClassName('imageOptbut')[0].style.borderColor = 'black';
-                    document.getElementsByClassName('imageOptbut')[imgCounter].style.borderWidth = '2px';
-                    document.getElementsByClassName('imageOptbut')[imgCounter].style.borderColor = 'rgb(40, 90, 255)';
-                    document.getElementById('imagePrev').src = document.getElementsByClassName('imageOpt')[imgCounter].src;
-                }
             }
         }
         document.getElementsByClassName('imgToggle')[1].onclick = function() {
@@ -357,12 +350,6 @@ addEventListener("DOMContentLoaded", () => {
                     document.getElementsByClassName('imageOptbut')[i + 1].style.borderColor = 'rgb(40, 90, 255)';
                     document.getElementById('imagePrev').src = document.getElementsByClassName('imageOpt')[i + 1].src;
                     return
-                } else if (document.getElementsByClassName('imageOptbut')[i].style.borderWidth == '2px' && i == imgCounter - 1) {
-                    document.getElementsByClassName('imageOptbut')[imgCounter - 1].style.borderWidth = '1px';
-                    document.getElementsByClassName('imageOptbut')[imgCounter - 1].style.borderColor = 'black';
-                    document.getElementsByClassName('imageOptbut')[0].style.borderWidth = '2px';
-                    document.getElementsByClassName('imageOptbut')[0].style.borderColor = 'rgb(40, 90, 255)';
-                    document.getElementById('imagePrev').src = document.getElementsByClassName('imageOpt')[0].src;
                 }
             }
         }
@@ -411,7 +398,10 @@ addEventListener("DOMContentLoaded", () => {
             return false;
         }
         document.getElementById('addcartbut').onclick = function() {
-            alert('This feature will be available soon!');
+            function delayAlert() {
+                alert('This feature will be available soon!')
+            }
+            setTimeout(delayAlert, 400)
         }
     }
     start();

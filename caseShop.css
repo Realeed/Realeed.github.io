@@ -294,7 +294,7 @@ select option:checked {
     font-family: sans-serif;
     text-decoration: none;
     user-select: none;
-}
+    }
 #covid_href:hover {
     text-decoration: underline;
 }
