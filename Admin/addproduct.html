@@ -3,28 +3,85 @@
     <head>
         <title>Administrator</title>
         <meta name="viewpoint" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../general/bs.css">
         <link rel="stylesheet" href="admin.css">
+        <script src="../general/bs.js"></script>
         <script src="admin.js"></script>
         <link rel="icon" href="../data/logo.png">
     </head>
     <body>
+        <div id="scountry">
+            <table id="firstTable">
+            <tr>
+                <td><p id="choose" style="margin: 0; padding-top: 15px; font-size: 15px;">Choose another country or region to see content specific to your location.</p></td>
+                <td>
+                <select name="Select" class="selectCountry" style="padding-left: 20px;">
+                    <option class="cOption" value="Armenia">✓ Armenia</option>
+                    <option class="cOption" value="Arbania">Albania</option>
+                    <option class="cOption" value="Argentina">Argentina</option>
+                    <option class="cOption" value="Brazil">Brazil</option>
+                    <option class="cOption" value="Canada">Canada</option>
+                    <option class="cOption" value="Bulgaria">Bulgaria</option>
+                    <option class="cOption" value="France">France</option>
+                    <option class="cOption" value="Germany">Germany</option>
+                    <option class="cOption" value="Greece">Greece</option>
+                    <option class="cOption" value="Spain">Spain</option>
+                    <option class="cOption" value="United Kingdom">United Kingdom</option>
+                    <option class="cOption" value="United States">United States</option>
+                </select>     
+                <button class="countryBut">Continue</button>
+                </td>
+                <td><button class="closeCountry">✕</button></td>
+            </tr>
+        </table>     
+        </div>
+        <div id="scountryMob">
+            <table id="firstTableMob">
+            <tr>
+                <td><p id="chooseMob" style="margin: 0; padding-top: 10px; font-size: 15px; margin-top: 20px;">Choose another country or region to see content specific to your location.</p></td>
+            </tr>
+            <tr>
+                <td>
+                <select name="Select" class="selectCountry" style="padding-left: 10%; width: 50%; margin: auto; margin-top: 30px; margin-left: 5%;">
+                    <option class="cOptionMob" value="Armenia">✓ Armenia</option>
+                    <option class="cOptionMob" value="Arbania">Albania</option>
+                    <option class="cOptionMob" value="Argentina">Argentina</option>
+                    <option class="cOptionMob" value="Brazil">Brazil</option>
+                    <option class="cOptionMob" value="Canada">Canada</option>
+                    <option class="cOptionMob" value="Bulgaria">Bulgaria</option>
+                    <option class="cOptionMob" value="France">France</option>
+                    <option class="cOptionMob" value="Greece">Greece</option>
+                    <option class="cOptionMob" value="Russia">Russia</option>
+                    <option class="cOptionMob" value="Spain">Spain</option>
+                    <option class="cOptionMob" value="United Kingdom">United Kingdom</option>
+                    <option class="cOptionMob" value="United States">United States</option>
+                </select>  
+                <button class="countryBut">Continue</button>  
+                </td> 
+                <td><button class="closeCountry">✕</button></td>
+            </tr>
+        </table>
+        </div>
         <div id="menu">
             <table id="secondTable">
                 <tr>
-                    <td><a class="menu" href="../"><button id="logoBut"><img id="logo" src="../data/logo.jpg" alt="Case Shop"></button></a></td>
-                    <td><a class="menu" id="menuiphone" href="../iphone" style="margin-left: 20px;">iPhone</a></td>
-                    <td><a class="menu" id="menusamsung" href="../samsung">Samsung</a></td>
-                    <td><a class="menu" id="menuairpod" href="../airpod" style="margin-right: 10px;">AirPod</a></td>
-                    <td><a class="menu" id="menucustom" href="../custom">Customize</a></td>
-                    <td><a class="menu" id="menusupport" href="../support">Support</a></td>
+                    <td><a class="menu" href=""><button id="logoBut"><img id="logo" src="../data/logo.jpg" alt="Case Shop"></button></a></td>
+                    <td><a class="menu" id="menuiphone" href="iphone" style="margin-left: 20px;">iPhone</a></td>
+                    <td><a class="menu" id="menusamsung" href="samsung">Samsung</a></td>
+                    <td><a class="menu" id="menuairpod" href="airpod" style="margin-right: 10px;">AirPod</a></td>
+                    <td><a class="menu" id="menucustom" href="custom">Customize</a></td>
+                    <td><a class="menu" id="menusupport" href="support">Support</a></td>
                     <td><button class="menu" id="menusearch"><img id="searchImg" src="../data/search.png" alt="Search"></button></td>
                     <td><button class="menu" id="menubag"><img id="bagImg" src="../data/bag.png" alt="Bag"></button></td>
+                    <td><button class="menu" id="menulang"><img id="langImg" src="../data/lang.png" alt="Language"></button></td>
+                    <td><button class="menu" id="langEng" disabled>Eng</button></td>
+                    <td><button class="menu" id="langHay">Հայ</button></td>
                 </tr>
             </table>
             <table id="searchtab">
                 <tr class="butsc">
                     <td><img src="../data/searchbl.png" style="width: 20px; margin-top: 10px; margin-left: 10px;" alt=""></td>
-                    <td><button class="sbuts" style="padding-top: 8px;">iphone</button></td>
+                    <td><button class="sbuts" style="margin-top: 8px;">iphone</button></td>
                 </tr>
                 <tr class="butsc">
                     <td><img src="../data/searchbl.png" style="width: 20px; margin-left: 10px;" alt=""></td>
@@ -36,6 +93,88 @@
                 </tr>
                 <tr>
                     <td><p id="stxt">Searching in casessouel.com</p></td>
+                </tr>
+            </table>
+            <table id="bagtab">
+                <tr>
+                    <td><a class="baghref" href="../Bag/bag.html"><img class="bagImg" id="bagbagImg" style="margin-top: 20px;" src="../data/bag.png" alt="">Bag</a></td>
+                </tr>
+                <tr>
+                    <td><hr class="baghr"></td>
+                </tr>
+                <tr>
+                    <td><a class="baghref" href="../Bag/bag.html"><img class="bagImg" id="bagfavImg" src="../data/favorite.png" alt="">Favorites</a></td>
+                </tr>
+                <tr>
+                    <td><hr class="baghr"></td>
+                </tr>
+                <tr>
+                    <td><a class="baghref" href="../Bag/bag.html"><img class="bagImg" id="bagordImg" src="../data/order.png" alt="">Orders</a></td>
+                </tr>
+                <tr>
+                    <td><hr class="baghr"></td>
+                </tr>
+                <tr>
+                    <td><a class="baghref" href="../Bag/bag.html"><img class="bagImg" id="bagaccImg" src="../data/account.png" alt="">Account</a></td>
+                </tr>
+                <tr>
+                    <td><hr class="baghr"></td>
+                </tr>
+                <tr>
+                    <td style="padding-bottom: 15px;"><a class="baghref" href="../Bag/bag.html"><img class="bagImg" id="bagsignImg" src="../data/profile.png" alt="">Sign in</a></td>
+                </tr>
+            </table>
+            <table id="langtab">
+                <tr>
+                    <td><button class="langsopt" id="arm" style="margin-top: 10px;">Armenian</button></td>
+                </tr>
+                <tr>
+                    <td><hr class="langhr"></td>
+                </tr>
+                <tr>
+                    <td><button class="langsopt" id="alb">Albanian</button></td>
+                </tr>
+                <tr>
+                    <td><hr class="langhr"></td>
+                </tr>
+                <tr>
+                    <td><button class="langsopt" id="bul">Bulgarian</button></td>
+                </tr>
+                <tr>
+                    <td><hr class="langhr"></td>
+                </tr>
+                <tr>
+                    <td><button class="langsopt" id="eng">English</button></td>
+                </tr>
+                <tr>
+                    <td><hr class="langhr"></td>
+                </tr>
+                <tr>
+                    <td><button class="langsopt" id="fch">French</button></td>
+                </tr>
+                <tr>
+                    <td><hr class="langhr"></td>
+                </tr>
+                <tr>
+                    <td><button class="langsopt" id="ger">German</button></td>
+                </tr>
+                <tr>
+                    <td><hr class="langhr"></td>
+                </tr>
+                <tr>
+                    <td><button class="langsopt" id="grc">Greece</button></td>
+                </tr>
+                <tr>
+                    <td><hr class="langhr"></td>
+                </tr>
+                <tr>
+                    <td><button class="langsopt" id="rus">Russian</button></td>
+                </tr>
+                <tr>
+                    <td><hr class="langhr"></td>
+                </tr>
+                <tr>
+                    <td><button class="langsopt" id="spn" style="margin-bottom: 8px;">Spanish</button></td>
                 </tr>
             </table>
         </div>
@@ -116,6 +255,56 @@
                 </tr>
                 <tr>
                     <td><button class="buybut" id="orderbut">Order</button><button class="buybut" id="addcartbut">Add to Cart</button></td>                   
+                </tr>
+            </table>
+        </div>
+        <div id="bottompanel">
+            <table id="lasttable">
+                <tr>
+                    <td colspan="5"><p style="font-size: 13px; padding-left: 8px;">Stay connected with us</p></td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <a href="https://www.instagram.com/cases_souel/" id="instalogo" target="_blank"><img style="width: 42.5px; padding-bottom: 2px; -webkit-user-drag: none;" src="../data/instalogo.png" alt="instagram"></a>
+                        <a href="https://www.facebook.com/souel.cases/" id="fblogo" target="_blank"><img style="width: 37px; -webkit-user-drag: none;" src="../data/fblogo.png" alt="facebook"></a>
+                        <a href="" id="telegramlogo" target="_blank"><img style="width: 30.5px; padding-bottom: 2.5px; padding-left: 7px; -webkit-user-drag: none;" src="../data/telegramlogo.png" alt="telegram"></a>
+                        <a href="" id="tiktoklogo" target="_blank"><img style="width: 30.5px; padding-bottom: 3px; padding-left: 9px; -webkit-user-drag: none;" src="../data/tiktoklogo.png" alt="tiktok"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><hr style="width: 320%; margin-bottom: 30px;"></td>
+                </tr>
+                <tr style="font-weight: bolder">
+                    <td>Products</td>
+                    <td>Support</td>
+                    <td>Careers</td>
+                    <td>About us</td>
+                </tr>
+                <tr>
+                    <td style="padding-top: 10px;"><a class="conc" href="iphone"> iPhone cases </a></td>
+                    <td style="padding-top: 10px;"><a class="conc" href="support"> Contact us </a></td>
+                    <td style="padding-top: 10px;"><a class="conc" href="career"> Job openings </a></td>
+                    <td style="padding-top: 10px;"><a class="conc" href="about"> Who we are! </a></td>
+                </tr>
+                <tr>
+                    <td style="padding-top: 10px;"><a class="conc" href="samsung"> Samsung cases </a></td>
+                    <td style="padding-top: 10px;"></td>
+                    <td style="padding-top: 10px;"><a class="conc" href="career"> Internships </a></td>
+                    <td style="padding-top: 10px;"></td>
+                </tr>
+                <tr>
+                    <td style="padding-top: 10px;"><a class="conc" href="airpod"> AirPods cases</a></td>
+                </tr>
+                <tr>
+                    <td><hr style="margin-top: 80px; width: 320%;"></td>
+                </tr>
+            </table>
+            <table id="coptab">
+                <tr>
+                    <td style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 13.5px;">Copyright © 2021 Webly Inc. All rights reserved.</td>
+                    <td style="padding-top: 5px;"><a class="conc" href="">Privacy Policy</a></td>
+                    <td style="padding-top: 5px;"><a class="conc" href="">Terms of Use</a></td>
+                    <td style="padding-top: 5px;"><a class="conc" href="">Sales and Refunds</a></td>
                 </tr>
             </table>
         </div>
