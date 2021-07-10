@@ -133,14 +133,15 @@
 }
 #imagePrev {
     margin-left: 200px;
-    padding-top: 150px;
+    margin-top: 150px;
     height: 550px;
     display: none;
 }
 .imgToggle {
-    margin-top: 20px;
+    position: absolute;
+    margin-top: -330px;
     background-color: transparent;
-    font-size: 40px;
+    font-size: 80px;
     color: rgb(120, 120, 120);
     border: none;
     cursor: pointer;

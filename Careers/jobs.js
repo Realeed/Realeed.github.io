@@ -40,35 +40,35 @@ addEventListener("DOMContentLoaded", () => {
         }
     }
     searchBut.onmouseenter = () => {
-        searchImg.src = 'data/searchwh.png';
-        bagImg.src = 'data/bag.png';
+        searchImg.src = '../data/searchwh.png';
+        bagImg.src = '../data/bag.png';
         document.getElementById('bagtab').style.visibility = 'hidden';
     }
     searchBut.onmouseleave = () => {
-        searchImg.src = 'data/search.png';
+        searchImg.src = '../data/search.png';
     }
     bagBut.onmouseenter = () => {
-        bagImg.src = 'data/bagwh.png';
+        bagImg.src = '../data/bagwh.png';
         document.getElementById('bagtab').style.visibility = 'visible';
-        langImg.src = 'data/lang.png';
+        langImg.src = '../data/lang.png';
         document.getElementById('langtab').style.visibility = 'hidden';
         
     }
     langBut.onmouseenter = () => {
-        langImg.src = 'data/langwh.png';
+        langImg.src = '../data/langwh.png';
         document.getElementById('langtab').style.visibility = 'visible';
-        bagImg.src = 'data/bag.png';
+        bagImg.src = '../data/bag.png';
         document.getElementById('bagtab').style.visibility = 'hidden';
     }
     document.getElementById('langHay').onmouseenter = () => {
-        langImg.src = 'data/lang.png';
+        langImg.src = '../data/lang.png';
         document.getElementById('langtab').style.visibility = 'hidden';
     }
     document.getElementById('menu').onmouseleave = () => {
         document.getElementById('langtab').style.visibility = 'hidden'
-        langImg.src = 'data/lang.png';
+        langImg.src = '../data/lang.png';
         document.getElementById('bagtab').style.visibility = 'hidden';
-        bagImg.src = 'data/bag.png';
+        bagImg.src = '../data/bag.png';
     }
     function trsarm() {
         document.body.style.visibility = 'hidden';
@@ -188,7 +188,7 @@ addEventListener("DOMContentLoaded", () => {
             document.getElementById('stxt').style.opacity = '0.5';
             document.body.style.overflowY = 'hidden';
             const searchim = document.createElement('img');
-            searchim.src = 'data/search.png';
+            searchim.src = '../data/search.png';
             searchim.style.width = '25px';
             searchim.style.marginBottom = '-6px';
             document.getElementById('menu').appendChild(searchim);

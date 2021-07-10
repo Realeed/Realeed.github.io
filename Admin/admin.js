@@ -5,6 +5,9 @@ addEventListener("DOMContentLoaded", () => {
         document.getElementById('prevProdbut').style.cursor = 'pointer';
         document.getElementById('addProdbut').disabled = false;
         document.getElementById('addProdbut').style.cursor = 'pointer';
+        for (let i = 0; i < 2; i++) {
+            document.getElementsByClassName('buybut')[i].style.visibility = 'visible';
+        }
         if (imgCounter == 0) {
             document.getElementById('imagePrev').src = URL.createObjectURL(event.target.files[0]);
             document.getElementsByClassName('imageOptbut')[imgCounter].style.borderColor = 'rgb(40, 90, 255)';
@@ -20,17 +23,13 @@ addEventListener("DOMContentLoaded", () => {
         } else {
             alert('Cannot insert more than 7 photos!');
         }
-        for (let i = 0; i < 2; i++) {
-            document.getElementsByClassName('imgToggle')[i].style.visibility = 'visible';
-            document.getElementsByClassName('buybut')[i].style.visibility = 'visible';
-        }
         if (imgCounter < 7) {
             imgCounter++;
         }
         return false;
     }
     for (let i = 0; i < 7; i++) {
-        document.getElementsByClassName('imageOptbut')[i].onmouseenter = function() {
+        document.getElementsByClassName('imageOptbut')[i].onmouseenter = function () {
             for (let j = 0; j < 7; j++) {
                 if (document.getElementsByClassName('imageOptbut')[j].style.borderWidth == '2px') {
                     document.getElementsByClassName('imageOptbut')[j].style.borderWidth = '1px';
@@ -42,7 +41,33 @@ addEventListener("DOMContentLoaded", () => {
             document.getElementById('imagePrev').src = document.getElementsByClassName('imageOpt')[i].src;
         }
     }
-    document.getElementsByClassName('imgToggle')[0].onclick = function() {
+    document.getElementById('imagePrev').onmouseenter = () => {
+        for (let i = 0; i < 2; i++) {
+            document.getElementsByClassName('imgToggle')[i].style.visibility = 'visible'
+            document.getElementsByClassName('imgToggle')[i].animate([{ opacity: '0' }, { opacity: '1' }], 500)
+            document.getElementsByClassName('imgToggle')[i].style.opacity = '1'
+        }
+    }
+    for (let i = 0; i < 2; i++) {
+        document.getElementsByClassName('imgToggle')[i].onmouseenter = () => {
+            document.getElementsByClassName('imgToggle')[0].style.visibility = 'visible'
+            document.getElementsByClassName('imgToggle')[0].style.opacity = '1'
+            document.getElementsByClassName('imgToggle')[1].style.visibility = 'visible'
+            document.getElementsByClassName('imgToggle')[1].style.opacity = '1'
+        }
+    }
+    for (let i = 0; i < 2; i++) {
+        document.getElementsByClassName('imgToggle')[i].onmouseleave = () => {
+            document.getElementsByClassName('imgToggle')[0].style.visibility = 'hidden';
+            document.getElementsByClassName('imgToggle')[1].style.visibility = 'hidden';
+        }
+    }
+    document.getElementById('imagePrev').onmouseleave = () => {
+        for (let i = 0; i < 2; i++) {
+            document.getElementsByClassName('imgToggle')[i].style.visibility = 'hidden';
+        }
+    }
+    document.getElementsByClassName('imgToggle')[0].onclick = function () {
         for (let i = 0; i < imgCounter + 1; i++) {
             if (document.getElementsByClassName('imageOptbut')[i].style.borderWidth == '2px' && i > 0) {
                 document.getElementsByClassName('imageOptbut')[i].style.borderWidth = '1px';
@@ -54,7 +79,7 @@ addEventListener("DOMContentLoaded", () => {
             }
         }
     }
-    document.getElementsByClassName('imgToggle')[1].onclick = function() {
+    document.getElementsByClassName('imgToggle')[1].onclick = function () {
         for (let i = 0; i < imgCounter + 1; i++) {
             if (document.getElementsByClassName('imageOptbut')[i].style.borderWidth == '2px' && i < imgCounter - 1) {
                 document.getElementsByClassName('imageOptbut')[i].style.borderWidth = '1px';
@@ -110,7 +135,7 @@ addEventListener("DOMContentLoaded", () => {
         counter++;
         return false;
     }
-    document.getElementById('addcartbut').onclick = function() {
+    document.getElementById('addcartbut').onclick = function () {
         function delayAlert() {
             alert('This feature will be available soon!')
         }
