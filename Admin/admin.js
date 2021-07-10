@@ -56,14 +56,20 @@ addEventListener("DOMContentLoaded", () => {
     }
     for (let i = 0; i < 2; i++) {
         document.getElementsByClassName('imgToggle')[i].onmouseenter = () => {
-            document.getElementsByClassName('imgToggle')[0].style.visibility = 'visible'
-            document.getElementsByClassName('imgToggle')[1].style.visibility = 'visible'
-            document.getElementsByClassName('arrows')[0].src = '../data/leftwh.png'
-            document.getElementsByClassName('arrows')[1].src = '../data/rightwh.png'
+            if (i == 0) {
+                document.getElementsByClassName('arrows')[0].src = '../data/leftwh.png'
+            } else {
+                document.getElementsByClassName('arrows')[1].src = '../data/rightwh.png'
+            }
+            
+            
         }
         document.getElementsByClassName('imgToggle')[i].onmouseleave = () => {
-            document.getElementsByClassName('arrows')[0].src = '../data/left.png'
-            document.getElementsByClassName('arrows')[1].src = '../data/right.png'
+            if (i == 0) {
+                document.getElementsByClassName('arrows')[0].src = '../data/left.png'
+            } else {
+                document.getElementsByClassName('arrows')[1].src = '../data/right.png'
+            }
         }
     }
     
