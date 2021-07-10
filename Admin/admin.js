@@ -41,30 +41,17 @@ addEventListener("DOMContentLoaded", () => {
             document.getElementById('imagePrev').src = document.getElementsByClassName('imageOpt')[i].src;
         }
     }
-    document.getElementById('imagePrev').onmouseenter = () => {
+    document.getElementById('imgandtog').onmouseenter = () => {
         for (let i = 0; i < 2; i++) {
             document.getElementsByClassName('imgToggle')[i].style.visibility = 'visible'
-            document.getElementsByClassName('imgToggle')[i].animate([{ opacity: '0' }, { opacity: '1' }], 500)
+            document.getElementsByClassName('imgToggle')[i].animate([{ opacity: '0' }, { opacity: '1' }], 400)
             document.getElementsByClassName('imgToggle')[i].style.opacity = '1'
         }
     }
-    for (let i = 0; i < 2; i++) {
-        document.getElementsByClassName('imgToggle')[i].onmouseenter = () => {
-            document.getElementsByClassName('imgToggle')[0].style.visibility = 'visible'
-            document.getElementsByClassName('imgToggle')[0].style.opacity = '1'
-            document.getElementsByClassName('imgToggle')[1].style.visibility = 'visible'
-            document.getElementsByClassName('imgToggle')[1].style.opacity = '1'
-        }
-    }
-    for (let i = 0; i < 2; i++) {
-        document.getElementsByClassName('imgToggle')[i].onmouseleave = () => {
-            document.getElementsByClassName('imgToggle')[0].style.visibility = 'hidden';
-            document.getElementsByClassName('imgToggle')[1].style.visibility = 'hidden';
-        }
-    }
-    document.getElementById('imagePrev').onmouseleave = () => {
+    document.getElementById('imgandtog').onmouseleave = () => {
         for (let i = 0; i < 2; i++) {
-            document.getElementsByClassName('imgToggle')[i].style.visibility = 'hidden';
+            document.getElementsByClassName('imgToggle')[i].animate([{ opacity: '1' }, { opacity: '0' }], 300)
+            document.getElementsByClassName('imgToggle')[i].style.opacity = '0'
         }
     }
     document.getElementsByClassName('imgToggle')[0].onclick = function () {
